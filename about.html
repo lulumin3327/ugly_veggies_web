@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>關於我們 — 醜蔬果誌</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .about-manifesto {
+      font-family: var(--font-display);
+      font-size: clamp(1.3rem, 2.5vw, 1.9rem);
+      font-style: italic;
+      line-height: 1.55;
+      color: var(--primary-color);
+      border-left: 4px solid var(--accent-color);
+      padding-left: 1.5rem;
+      margin: 3rem 0;
+    }
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2.5rem;
+    }
+    .team-card {
+      background-color: var(--white);
+      border: 1.5px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 1.75rem 1.5rem;
+      text-align: center;
+    }
+    .team-avatar {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background-color: var(--bg-section);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      margin: 0 auto 1rem;
+    }
+    .team-name {
+      font-family: var(--font-display);
+      font-size: 1rem;
+      color: var(--primary-color);
+      margin-bottom: 0.2rem;
+    }
+    .team-role {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+    .values-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+    }
+    .value-block {
+      padding: 2rem;
+      background-color: var(--white);
+      border: 1.5px solid var(--border-color);
+      border-radius: var(--radius-lg);
+    }
+    .value-num {
+      font-family: var(--font-display);
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: var(--accent-color);
+      line-height: 1;
+      margin-bottom: 0.5rem;
+    }
+    .value-title {
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      color: var(--primary-color);
+      margin-bottom: 0.5rem;
+    }
+    .value-desc {
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      line-height: 1.65;
+    }
+    @media (max-width: 600px) {
+      .values-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <div id="nav-placeholder"></div>
+
+  <main class="page-content">
+
+    <section class="page-hero">
+      <div class="container">
+        <span class="eyebrow" style="color:rgba(255,255,255,0.6)">品牌故事</span>
+        <h1>關於醜蔬果誌</h1>
+        <p>我們從一根奇怪的雙頭紅蘿蔔開始，認為每種農產品都值得被好好欣賞。</p>
+      </div>
+    </section>
+
+    <!-- Story -->
+    <section class="section">
+      <div class="container" style="max-width:780px;">
+        <span class="eyebrow">起源</span>
+        <h2>從一根歪紅蘿蔔說起</h2>
+
+        <blockquote class="about-manifesto">
+          "那天在市場，我看著那根長了兩條腿的紅蘿蔔被扔進淘汰籃。
+          它看起來比任何一根標準紅蘿蔔都還要有個性。"
+        </blockquote>
+
+        <p style="color:var(--text-mid);margin-bottom:1.25rem;line-height:1.8;">
+          醜蔬果誌於 2024 年創立，起點只是創辦人在市場拍下的一張照片——一根長了兩條腿的紅蘿蔔，因為長相奇特而被挑走，準備廢棄。
+        </p>
+        <p style="color:var(--text-mid);margin-bottom:1.25rem;line-height:1.8;">
+          我們相信，食物浪費的問題從「審美」開始。當社會對農產品的外觀要求越來越嚴格，大量合格卻「長相不佳」的蔬果被淘汰。醜蔬果誌想做的，就是翻轉這種價值觀——用雜誌的形式，讓這些個性蔬果被看見，被喜歡。
+        </p>
+        <p style="color:var(--text-mid);line-height:1.8;">
+          我們不只是做出版，更是在說一種生活態度：不完美才是真實，才是有趣的。
+        </p>
+      </div>
+    </section>
+
+    <!-- Values -->
+    <section class="section section--alt">
+      <div class="container">
+        <div class="section-header">
+          <span class="eyebrow">我們相信</span>
+          <h2>核心價值</h2>
+        </div>
+        <div class="values-grid">
+          <div class="value-block">
+            <div class="value-num">01</div>
+            <h3 class="value-title">每顆蔬果都有故事</h3>
+            <p class="value-desc">形狀奇怪不是缺點，而是生長過程獨特經歷的印記。我們採訪農夫，挖掘每一種醜蔬果背後的真實故事。</p>
+          </div>
+          <div class="value-block">
+            <div class="value-num">02</div>
+            <h3 class="value-title">美學是可以選擇的</h3>
+            <p class="value-desc">我們選擇用攝影師的眼光拍醜蔬果，讓奇異的形狀在鏡頭下成為一種魅力，而不是一種遺憾。</p>
+          </div>
+          <div class="value-block">
+            <div class="value-num">03</div>
+            <h3 class="value-title">減少浪費，從喜歡開始</h3>
+            <p class="value-desc">當你開始覺得醜蔬果有趣，你就更願意買它、吃它。這是最溫柔的一種行動主義。</p>
+          </div>
+          <div class="value-block">
+            <div class="value-num">04</div>
+            <h3 class="value-title">印刷還有力量</h3>
+            <p class="value-desc">我們選擇出版實體雜誌和桌曆，因為紙張能帶來螢幕給不了的溫度與重量。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Team -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="eyebrow">團隊</span>
+          <h2>背後的人</h2>
+          <p>一群相信「不完美才美」的創作者。</p>
+        </div>
+        <div class="team-grid">
+          <div class="team-card">
+            <div class="team-avatar">🥕</div>
+            <div class="team-name">林小農</div>
+            <div class="team-role">創辦人 / 主編</div>
+          </div>
+          <div class="team-card">
+            <div class="team-avatar">📷</div>
+            <div class="team-name">陳攝影</div>
+            <div class="team-role">視覺總監 / 攝影師</div>
+          </div>
+          <div class="team-card">
+            <div class="team-avatar">✏️</div>
+            <div class="team-name">李設計</div>
+            <div class="team-role">美術設計</div>
+          </div>
+          <div class="team-card">
+            <div class="team-avatar">🌱</div>
+            <div class="team-name">王文字</div>
+            <div class="team-role">文字編輯</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section style="padding:4rem 0;background-color:var(--accent-light);">
+      <div class="container text-center">
+        <h2 style="color:var(--primary-color);margin-bottom:1rem;">一起替醜蔬果說話</h2>
+        <p style="color:var(--text-mid);margin-bottom:2rem;max-width:44ch;margin-left:auto;margin-right:auto;">如果你也對醜蔬果有話想說，或想合作，歡迎聯絡我們。</p>
+        <a href="contact.html" class="btn btn--primary">聯絡我們</a>
+      </div>
+    </section>
+
+  </main>
+
+  <div id="footer-placeholder"></div>
+
+  <script src="components.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>雜誌系列 — 醜蔬果誌</title>
+  <meta name="description" content="瀏覽所有醜蔬果雜誌刊號，每期都有一顆特別的主角。" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div id="nav-placeholder"></div>
+
+  <main class="page-content">
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+      <div class="container">
+        <span class="eyebrow" style="color:rgba(255,255,255,0.6)">出版品</span>
+        <h1>雜誌系列</h1>
+        <p>每一刊，我們讓一種醜蔬果當主角。深度攝影、農場故事、創意食譜。</p>
+      </div>
+    </section>
+
+    <!-- Magazine Grid -->
+    <section class="section">
+      <div class="container">
+
+        <!-- Filter -->
+        <div class="filter-bar" role="group" aria-label="篩選刊號">
+          <button class="filter-btn active" data-filter="all">全部刊號</button>
+          <button class="filter-btn" data-filter="veggie">蔬菜</button>
+          <button class="filter-btn" data-filter="fruit">水果</button>
+          <button class="filter-btn" data-filter="root">根莖類</button>
+        </div>
+
+        <div class="grid-4">
+
+          <article class="card" data-category="root">
+            <div class="card__image">🥕</div>
+            <div class="card__body">
+              <span class="card__tag">Vol.03 · 根莖類</span>
+              <h3 class="card__title">雙頭紅蘿蔔特輯</h3>
+              <p class="card__desc">兩條腿的紅蘿蔔，跑得比你快。深入農場與廚房。</p>
+              <div style="display:flex;justify-content:space-between;align-items:center;margin-top:.75rem;">
+                <span class="card__price">NT$280</span>
+                <a href="contact.html" class="btn btn--primary" style="padding:.4rem .9rem;font-size:.8rem;">購買</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card" data-category="veggie">
+            <div class="card__image">🍅</div>
+            <div class="card__body">
+              <span class="card__tag">Vol.02 · 蔬菜</span>
+              <h3 class="card__title">方形番茄的一生</h3>
+              <p class="card__desc">它從來不圓，但它的故事是最圓滿的。</p>
+              <div style="display:flex;justify-content:space-between;align-items:center;margin-top:.75rem;">
+                <span class="card__price">NT$280</span>
+                <a href="contact.html" class="btn btn--primary" style="padding:.4rem .9rem;font-size:.8rem;">購買</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card" data-category="fruit">
+            <div class="card__image">🍋</div>
+            <div class="card__body">
+              <span class="card__tag">Vol.01 · 水果</span>
+              <h3 class="card__title">皺眉檸檬創刊號</h3>
+              <p class="card__desc">第一期主角是那顆你不敢買的老皺檸檬。</p>
+              <div style="display:flex;justify-content:space-between;align-items:center;margin-top:.75rem;">
+                <span class="card__price">NT$280</span>
+                <a href="contact.html" class="btn btn--primary" style="padding:.4rem .9rem;font-size:.8rem;">購買</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card" data-category="veggie">
+            <div class="card__image">🥦</div>
+            <div class="card__body">
+              <span class="card__tag">Vol.04 · 蔬菜</span>
+              <h3 class="card__title">倒三角花椰特輯</h3>
+              <p class="card__desc">天生就是主角的不對稱花椰菜，你真的吃過嗎？</p>
+              <div style="display:flex;justify-content:space-between;align-items:center;margin-top:.75rem;">
+                <span class="card__price">NT$280</span>
+                <a href="contact.html" class="btn btn--primary" style="padding:.4rem .9rem;font-size:.8rem;">購買</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card" data-category="root">
+            <div class="card__image">🥔</div>
+            <div class="card__body">
+              <span class="card__tag">Vol.05 · 根莖類</span>
+              <h3 class="card__title">長腿馬鈴薯物語</h3>
+              <p class="card__desc">這顆馬鈴薯長了四條不成比例的芽，卻是農夫最疼愛的一顆。</p>
+              <div style="display:flex;justify-content:space-between;align-items:center;margin-top:.75rem;">
+                <span class="card__price">NT$280</span>
+                <a href="contact.html" class="btn btn--primary" style="padding:.4rem .9rem;font-size:.8rem;">購買</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card" data-category="fruit">
+            <div class="card__image">🍓</div>
+            <div class="card__body">
+              <span class="card__tag">Vol.06 · 水果</span>
+              <h3 class="card__title">心形草莓告白</h3>
+              <p class="card__desc">太完美反而被嫌棄？心形草莓訴說被遺忘的委屈。</p>
+              <div style="display:flex;justify-content:space-between;align-items:center;margin-top:.75rem;">
+                <span class="card__price">NT$280</span>
+                <a href="contact.html" class="btn btn--primary" style="padding:.4rem .9rem;font-size:.8rem;">購買</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- Bundle CTA -->
+        <div style="margin-top:4rem;background-color:var(--bg-section);border:1.5px solid var(--border-color);border-radius:var(--radius-lg);padding:2.5rem;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1.5rem;">
+          <div>
+            <span class="eyebrow">超值優惠</span>
+            <h3 style="font-size:1.4rem;margin-bottom:.4rem;">全刊號合購包</h3>
+            <p style="color:var(--text-mid);font-size:.9rem;">Vol.01 ~ Vol.06，六刊一次收齊。</p>
+          </div>
+          <div style="display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap;">
+            <div>
+              <span style="text-decoration:line-through;color:var(--text-muted);font-size:.9rem;">NT$1,680</span>
+              <span class="card__price" style="font-size:1.5rem;margin-left:.5rem;">NT$1,380</span>
+            </div>
+            <a href="contact.html" class="btn btn--accent">合購訂購</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <div id="footer-placeholder"></div>
+
+  <script src="components.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>

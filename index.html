@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>醜蔬果誌 — 每顆歪瓜都值得被看見</title>
+  <meta name="description" content="醜蔬果雜誌與桌曆，專為那些不完美卻最有個性的蔬果而生。" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Page-specific hero styles -->
+  <style>
+    .stats-bar {
+      display: flex;
+      gap: 3rem;
+      margin-top: 2.5rem;
+      padding-top: 2.5rem;
+      border-top: 1.5px solid var(--border-color);
+      flex-wrap: wrap;
+    }
+    .stat-item__num {
+      font-family: var(--font-display);
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: var(--primary-color);
+      line-height: 1;
+    }
+    .stat-item__label {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-top: 0.2rem;
+    }
+    .marquee-strip {
+      background-color: var(--accent-color);
+      color: var(--white);
+      padding: 0.65rem 0;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+    .marquee-inner {
+      display: inline-block;
+      animation: marquee 24s linear infinite;
+      font-size: 0.85rem;
+      font-weight: 500;
+      letter-spacing: 0.05em;
+    }
+    @keyframes marquee {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    .marquee-item { margin: 0 2rem; }
+
+    .latest-section { padding: var(--gap-xl) 0; }
+    .latest-header {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      margin-bottom: 2.5rem;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .quote-block {
+      background-color: var(--primary-color);
+      color: var(--white);
+      padding: 5rem 0;
+      text-align: center;
+    }
+    .quote-block blockquote {
+      font-family: var(--font-display);
+      font-style: italic;
+      font-size: clamp(1.4rem, 3vw, 2.2rem);
+      color: var(--white);
+      max-width: 680px;
+      margin: 0 auto 1.5rem;
+      line-height: 1.35;
+    }
+    .quote-block cite {
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.55);
+      letter-spacing: 0.08em;
+    }
+
+    .newsletter {
+      padding: 4rem 0;
+    }
+    .newsletter__inner {
+      background-color: var(--white);
+      border: 1.5px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 3rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: center;
+    }
+    .newsletter__form {
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+    }
+    .newsletter__input {
+      flex: 1;
+      min-width: 180px;
+      padding: 0.7rem 1rem;
+      border: 1.5px solid var(--border-color);
+      border-radius: var(--radius-sm);
+      font-family: var(--font-body);
+      font-size: 0.9rem;
+      color: var(--text-dark);
+      background-color: var(--bg-color);
+    }
+    .newsletter__input:focus {
+      outline: none;
+      border-color: var(--secondary-color);
+    }
+
+    @media (max-width: 768px) {
+      .newsletter__inner {
+        grid-template-columns: 1fr;
+        padding: 2rem;
+        gap: 1.5rem;
+      }
+      .stats-bar { gap: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Nav (injected by components.js) -->
+  <div id="nav-placeholder"></div>
+
+  <main class="page-content">
+
+    <!-- ===== HERO ===== -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero__inner">
+
+          <div class="hero__text">
+            <span class="hero__label">Vol.01 — 2025 新刊上市</span>
+            <h1 class="hero__title">
+              每顆歪瓜<br>
+              都值得被<br>
+              <em>看見</em>
+            </h1>
+            <p class="hero__desc">
+              醜蔬果誌，一本寫給不完美蔬菜水果的雜誌。
+              我們相信，最有個性的農產品往往長得最不規矩。
+            </p>
+            <div class="hero__actions">
+              <a href="magazine.html" class="btn btn--primary">看看雜誌 →</a>
+              <a href="calendar.html" class="btn btn--outline">探索桌曆</a>
+            </div>
+
+            <div class="stats-bar">
+              <div class="stat-item">
+                <div class="stat-item__num">6</div>
+                <div class="stat-item__label">雜誌刊號</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-item__num">3</div>
+                <div class="stat-item__label">桌曆系列</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-item__num">100%</div>
+                <div class="stat-item__label">醜到可愛</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Visual: stacked magazine covers placeholder -->
+          <div class="hero__visual">
+            <div class="hero__cover-stack">
+              <!-- Back cover -->
+              <div class="cover-card cover-card--back">
+                <div class="cover-placeholder">
+                  <span class="cover-emoji">🍆</span>
+                  <span>醜蔬果誌 Vol.02</span>
+                </div>
+              </div>
+              <!-- Front cover -->
+              <div class="cover-card cover-card--front">
+                <div class="cover-placeholder">
+                  <span class="cover-emoji">🥕</span>
+                  <span>醜蔬果誌 Vol.01</span>
+                  <span style="font-size:0.7rem;opacity:.6">封面圖放這裡</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Marquee ===== -->
+    <div class="marquee-strip" aria-hidden="true">
+      <div class="marquee-inner">
+        <span class="marquee-item">🥕 雙頭紅蘿蔔</span>
+        <span class="marquee-item">🍅 方形番茄</span>
+        <span class="marquee-item">🥔 長腿馬鈴薯</span>
+        <span class="marquee-item">🍋 皺眉檸檬</span>
+        <span class="marquee-item">🫑 捲曲辣椒</span>
+        <span class="marquee-item">🥦 倒三角花椰</span>
+        <span class="marquee-item">🍓 心形草莓</span>
+        <span class="marquee-item">🫛 螺旋豆莢</span>
+        <!-- Duplicate for seamless loop -->
+        <span class="marquee-item">🥕 雙頭紅蘿蔔</span>
+        <span class="marquee-item">🍅 方形番茄</span>
+        <span class="marquee-item">🥔 長腿馬鈴薯</span>
+        <span class="marquee-item">🍋 皺眉檸檬</span>
+        <span class="marquee-item">🫑 捲曲辣椒</span>
+        <span class="marquee-item">🥦 倒三角花椰</span>
+        <span class="marquee-item">🍓 心形草莓</span>
+        <span class="marquee-item">🫛 螺旋豆莢</span>
+      </div>
+    </div>
+
+    <!-- ===== Features ===== -->
+    <section class="section section--alt">
+      <div class="container">
+        <div class="section-header">
+          <span class="eyebrow">我們做什麼</span>
+          <h2>把「缺陷」變成主角</h2>
+          <p>每一期雜誌，每一本桌曆，都在為那些被超市挑剔的蔬果平反。</p>
+        </div>
+        <div class="feature-list">
+          <div class="feature-item">
+            <div class="feature-item__icon">📖</div>
+            <h3 class="feature-item__title">雜誌</h3>
+            <p class="feature-item__desc">深度專題、攝影、食譜，每期主角都是一種個性十足的醜蔬果。</p>
+          </div>
+          <div class="feature-item">
+            <div class="feature-item__icon">🗓️</div>
+            <h3 class="feature-item__title">桌曆</h3>
+            <p class="feature-item__desc">把醜蔬果攤在桌上，每個月換一張讓你忍不住多看一眼的農產品。</p>
+          </div>
+          <div class="feature-item">
+            <div class="feature-item__icon">🌱</div>
+            <h3 class="feature-item__title">理念</h3>
+            <p class="feature-item__desc">減少食物浪費從欣賞開始。我們用美學的眼光看待所有不完美。</p>
+          </div>
+          <div class="feature-item">
+            <div class="feature-item__icon">📦</div>
+            <h3 class="feature-item__title">限量收藏</h3>
+            <p class="feature-item__desc">每期限量印刷，搭配手工包裝，適合自己珍藏或作為送禮首選。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Latest Issues ===== -->
+    <section class="latest-section">
+      <div class="container">
+        <div class="latest-header">
+          <div class="section-header" style="margin-bottom:0">
+            <span class="eyebrow">最新刊號</span>
+            <h2>近期出版</h2>
+          </div>
+          <a href="magazine.html" class="btn btn--outline">看全部雜誌</a>
+        </div>
+
+        <div class="grid-3">
+          <!-- Card 1 -->
+          <article class="card">
+            <div class="card__image">🥕</div>
+            <div class="card__body">
+              <span class="card__tag">雜誌 Vol.03</span>
+              <h3 class="card__title">雙頭紅蘿蔔特輯</h3>
+              <p class="card__desc">兩條腿的紅蘿蔔，跑得比你快。本期深入訪談農夫與料理師。</p>
+              <div style="display:flex;align-items:center;justify-content:space-between;">
+                <span class="card__price">NT$280</span>
+                <a href="magazine.html" class="btn btn--primary" style="padding:.4rem 1rem;font-size:.8rem;">了解更多</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="card">
+            <div class="card__image">🍅</div>
+            <div class="card__body">
+              <span class="card__tag">雜誌 Vol.02</span>
+              <h3 class="card__title">方形番茄的一生</h3>
+              <p class="card__desc">它從來不圓，但它的故事是最圓滿的。攝影師深入番茄農場紀實。</p>
+              <div style="display:flex;align-items:center;justify-content:space-between;">
+                <span class="card__price">NT$280</span>
+                <a href="magazine.html" class="btn btn--primary" style="padding:.4rem 1rem;font-size:.8rem;">了解更多</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 3 — Calendar -->
+          <article class="card">
+            <div class="card__image">🗓️</div>
+            <div class="card__body">
+              <span class="card__tag">桌曆 2026</span>
+              <h3 class="card__title">醜蔬果桌曆 2026</h3>
+              <p class="card__desc">12 個月 × 12 顆不完美的主角。放在桌上，每天都有新驚喜。</p>
+              <div style="display:flex;align-items:center;justify-content:space-between;">
+                <span class="card__price">NT$480</span>
+                <a href="calendar.html" class="btn btn--accent" style="padding:.4rem 1rem;font-size:.8rem;">了解更多</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Quote ===== -->
+    <section class="quote-block">
+      <div class="container">
+        <blockquote>
+          "醜，是另一種完美的形狀。"
+        </blockquote>
+        <cite>— 醜蔬果誌 創刊宣言</cite>
+      </div>
+    </section>
+
+    <!-- ===== Newsletter ===== -->
+    <section class="newsletter">
+      <div class="container">
+        <div class="newsletter__inner">
+          <div>
+            <span class="eyebrow">訂閱電子報</span>
+            <h2 style="font-size:1.8rem;">第一時間知道新刊</h2>
+            <p style="color:var(--text-mid);margin-top:.5rem;font-size:.9rem;">不定期分享醜蔬果故事、新品消息，以及田間直擊。</p>
+          </div>
+          <div>
+            <div class="newsletter__form">
+              <input type="email" class="newsletter__input" placeholder="你的 Email" aria-label="電子郵件" />
+              <button class="btn btn--primary">訂閱</button>
+            </div>
+            <p style="font-size:.75rem;color:var(--text-muted);margin-top:.75rem;">我們不會寄廣告，只寄醜蔬果。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer (injected by components.js) -->
+  <div id="footer-placeholder"></div>
+
+  <script src="components.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>

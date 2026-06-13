@@ -1,7 +1,31 @@
 /* =============================================
-   UGLY VEGGIE — Brand Tokens
-   Replace these when your visual system is ready
+   UGLY VEGGIE — Brand Fonts & Tokens
    ============================================= */
+
+/* 1. 註冊 Taipei Sans 常規體 (Regular) */
+@font-face {
+  font-family: 'TaipeiSans';
+  src: url('../fonts/TaipeiSansTCBeta-Regular.ttf') format('truetype');
+  font-weight: 400; /* Regular 對應 400 */
+  font-style: normal;
+}
+
+/* 2. 註冊 Taipei Sans 細體 (Light) */
+@font-face {
+  font-family: 'TaipeiSans';
+  src: url('../fonts/TaipeiSansTCBeta-Light.ttf') format('truetype');
+  font-weight: 300; /* Light 對應 300 */
+  font-style: normal;
+}
+
+/* 3. 註冊 Taipei Sans 粗體 (Bold) */
+@font-face {
+  font-family: 'TaipeiSans';
+  src: url('../fonts/TaipeiSansTCBeta-Bold.ttf') format('truetype');
+  font-weight: 700; /* Bold 對應 700 */
+  font-style: normal;
+}
+
 :root {
   /* Brand Colors — Placeholder palette */
   --primary-color: #2D5016;      /* Deep forest green */
@@ -16,10 +40,10 @@
   --border-color: #D9D4CA;
   --white: #FFFFFF;
 
-  /* Typography */
-  --font-display: 'Playfair Display', Georgia, serif;
-  --font-body: 'Inter', 'Helvetica Neue', Arial, sans-serif;
-  --font-label: 'Inter', Arial, sans-serif;
+  /* Typography —— 這裡已經幫你全面換成台北黑體 */
+  --font-display: 'TaipeiSans', 'Playfair Display', Georgia, serif;
+  --font-body: 'TaipeiSans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-label: 'TaipeiSans', Arial, sans-serif;
 
   /* Spacing */
   --gap-sm: 0.75rem;

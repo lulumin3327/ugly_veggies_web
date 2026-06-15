@@ -426,13 +426,20 @@ h3 { font-size: 1.3rem; }
 
 .card__image {
   width: 100%;
-  aspect-ratio: 3 / 4;
-  object-fit: cover;
+  aspect-ratio: 3 / 4;   /* 嚴格限制容器為 3:4 比例 */
   background-color: var(--bg-section);
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 4rem;
+  overflow: hidden;      /* 確保圖片超出 3:4 範圍時會被隱藏（裁切） */
+  
+}
+
+.card__image img {
+  width: 100%;           /* 強制寬度填滿父層 */
+  height: 100%;          /* 強制高度填滿父層（這會逼迫它依循 3:4 比例） */
+  object-fit: cover;     /* 關鍵：圖片在 3:4 的框架中自動縮放並完美填滿，多餘的裁切 */
 }
 
 .card__body {

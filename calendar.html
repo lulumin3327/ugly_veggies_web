@@ -68,9 +68,27 @@
       align-items: center;
       gap: 2px;
     }
-    .cal-month-chip span:first-child {
-      font-size: 1rem;
+    .cal-month-chip {
+      background-color: var(--bg-section);
+      border-radius: var(--radius-sm);
+      padding: 0.4rem 0.2rem;
+      text-align: center;
+      color: var(--text-dark);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1px;
     }
+    .cal-month-chip strong {
+      font-size: 0.8rem;
+      color: var(--primary-color);
+      font-weight: 700;
+    }
+    .cal-month-chip span {
+      font-size: 0.72rem;
+      color: var(--text-mid);
+    }
+
     .cal-card__specs {
       display: flex;
       flex-wrap: wrap;
@@ -131,29 +149,32 @@
 
         <div class="grid-3">
 
-          <!-- 2026 Standard -->
+        <!-- 2027 Standard -->
           <article class="cal-card" data-category="2027">
             <div class="cal-card__top">
               <div class="cal-card__year">2027 桌曆</div>
-              <span class="cal-card__emoji">🍓🥕🍅</span>
-              <div class="cal-card__series">醜蔬果桌曆 2027</div>
+              <!-- 移除突兀的 Emoji 串，改成優雅的英文副標 -->
+              <div class="cal-card__series">Ugly Veggies Calendar</div>
             </div>
             <div class="cal-card__body">
-              <p style="font-size:.875rem;color:var(--text-mid);margin-bottom:.5rem;">12 種各具特色的醜蔬果，每月換場。採用厚磅道林紙印刷。</p>
+              <p style="font-size:.875rem;color:var(--text-mid);margin-bottom:1rem;">12 種各具特色的手繪格外品醜蔬果，每月換場。採用厚磅道林紙印刷。</p>
+              
+              <!-- 12個月完美陣容清單 -->
               <div class="cal-card__months">
-                <div class="cal-month-chip"><span>🍓</span><span>1月</span></div>
-                <div class="cal-month-chip"><span>🥕</span><span>2月</span></div>
-                <div class="cal-month-chip"><span>🍅</span><span>3月</span></div>
-                <div class="cal-month-chip"><span>🍋</span><span>4月</span></div>
-                <div class="cal-month-chip"><span>🥔</span><span>5月</span></div>
-                <div class="cal-month-chip"><span>🍆</span><span>6月</span></div>
-                <div class="cal-month-chip"><span>🫑</span><span>7月</span></div>
-                <div class="cal-month-chip"><span>🍆</span><span>8月</span></div>
-                <div class="cal-month-chip"><span>🌽</span><span>9月</span></div>
-                <div class="cal-month-chip"><span>🧅</span><span>10月</span></div>
-                <div class="cal-month-chip"><span>🫛</span><span>11月</span></div>
-                <div class="cal-month-chip"><span>🥬</span><span>12月</span></div>
+                <div class="cal-month-chip"><strong>1月</strong><span>草莓</span></div>
+                <div class="cal-month-chip"><strong>2月</strong><span>白蘿蔔</span></div>
+                <div class="cal-month-chip"><strong>3月</strong><span>馬鈴薯</span></div>
+                <div class="cal-month-chip"><strong>4月</strong><span>枇杷</span></div>
+                <div class="cal-month-chip"><strong>5月</strong><span>蓮霧</span></div>
+                <div class="cal-month-chip"><strong>6月</strong><span>茄子</span></div>
+                <div class="cal-month-chip"><strong>7月</strong><span>秋葵</span></div>
+                <div class="cal-month-chip"><strong>8月</strong><span>小黃瓜</span></div>
+                <div class="cal-month-chip"><strong>9月</strong><span>檸檬</span></div>
+                <div class="cal-month-chip"><strong>10月</strong><span>紅蘿蔔</span></div>
+                <div class="cal-month-chip"><strong>11月</strong><span>柿子</span></div>
+                <div class="cal-month-chip"><strong>12月</strong><span>甜椒</span></div>
               </div>
+
               <div class="cal-card__specs">
                 <span class="spec-tag">A5 直立</span>
                 <span class="spec-tag">厚磅道林紙</span>
@@ -171,7 +192,7 @@
       </div>
     </section>
 
-    <!-- Month preview -->
+    <!-- Month preview 陣容區塊同步修改 -->
     <section class="preview-strip">
       <div class="container">
         <div class="section-header">
@@ -180,18 +201,22 @@
           <p>每個月一位主角，12 個月都不重複，全年陪你在桌上。</p>
         </div>
         <div class="month-preview-grid">
-          <div class="month-preview-cell"><span class="month-preview-cell__emoji">🍓</span><span class="month-preview-cell__label">1月 草莓</span></div>
-          <div class="month-preview-cell"><span class="month-preview-cell__emoji">🥕</span><span class="month-preview-cell__label">2月 橘子</span></div>
-          <div class="month-preview-cell"><span class="month-preview-cell__emoji">🍅</span><span class="month-preview-cell__label">3月 番茄</span></div>
-          <div class="month-preview-cell"><span class="month-preview-cell__emoji">🍋</span><span class="month-preview-cell__label">4月 檸檬</span></div>
-          <div class="month-preview-cell"><span class="month-preview-cell__emoji">🥔</span><span class="month-preview-cell__label">5月 馬鈴薯</span></div>
-          <div class="month-preview-cell"><span class="month-preview-cell__emoji">🍆</span><span class="month-preview-cell__label">6月 茄子</span></div>
-          <div class="month-preview-cell"><span class="month-preview-cell__emoji">🫑</span><span class="month-preview-cell__label">7月 辣椒</span></div>
-          <div class="month-preview-cell"><span class="month-preview-cell__emoji">🍆</span><span class="month-preview-cell__label">8月 茄子</span></div>
-          <div class="month-preview-cell"><span class="month-preview-cell__emoji">🌽</span><span class="month-preview-cell__label">9月 玉米</span></div>
-          <div class="month-preview-cell"><span class="month-preview-cell__emoji">🧅</span><span class="month-preview-cell__label">10月 洋蔥</span></div>
-          <div class="month-preview-cell"><span class="month-preview-cell__emoji">🫛</span><span class="month-preview-cell__label">11月 豆莢</span></div>
-          <div class="month-preview-cell"><span class="month-preview-cell__emoji">🥬</span><span class="month-preview-cell__label">12月 高麗菜</span></div>
+          <div class="month-preview-cell"><strong style="color:var(--accent-color); font-size: 1.1rem; display:block; margin-bottom:2px;">01</strong><span class="month-preview-cell__label">1月 草莓</span></div>
+          <div class="month-preview-cell"><strong style="color:var(--accent-color); font-size: 1.1rem; display:block; margin-bottom:2px;">02</strong><span class="month-preview-cell__label">2月 白蘿蔔</span></div>
+          <div class="month-preview-cell"><strong style="color:var(--accent-color); font-size: 1.1rem; display:block; margin-bottom:2px;">03</strong><span class="month-preview-cell__label">3月 馬鈴薯</span></div>
+          <div class="month-preview-cell"><strong style="color:var(--accent-color); font-size: 1.1rem; display:block; margin-bottom:2px;">04</strong><span class="month-preview-cell__label">4月 枇杷</span></div>
+          <div class="month-preview-cell"><strong style="color:var(--accent-color); font-size: 1.1rem; display:block; margin-bottom:2px;">05</strong><span class="month-preview-cell__label">5月 蓮霧</span></div>
+          <div class="month-preview-cell"><strong style="color:var(--accent-color); font-size: 1.1rem; display:block; margin-bottom:2px;">06</strong><span class="month-preview-cell__label">6月 茄子</span></div>
+          <div class="month-preview-cell"><strong style="color:var(--accent-color); font-size: 1.1rem; display:block; margin-bottom:2px;">07</strong><span class="month-preview-cell__label">7月 秋葵</span></div>
+          <div class="month-preview-cell"><strong style="color:var(--accent-color); font-size: 1.1rem; display:block; margin-bottom:2px;">08</strong><span class="month-preview-cell__label">8月 小黃瓜</span></div>
+          <div class="month-preview-cell"><strong style="color:var(--accent-color); font-size: 1.1rem; display:block; margin-bottom:2px;">09</strong><span class="month-preview-cell__label">9月 檸檬</span></div>
+          <div class="month-preview-cell"><strong style="color:var(--accent-color); font-size: 1.1rem; display:block; margin-bottom:2px;">10</strong><span class="month-preview-cell__label">10月 紅蘿蔔</span></div>
+          <div class="month-preview-cell"><strong style="color:var(--accent-color); font-size: 1.1rem; display:block; margin-bottom:2px;">11</strong><span class="month-preview-cell__label">11月 柿子</span></div>
+          <div class="month-preview-cell"><strong style="color:var(--accent-color); font-size: 1.1rem; display:block; margin-bottom:2px;">12</strong><span class="month-preview-cell__label">12月 甜椒</span></div>
+        </div>
+      </div>
+    </section>
+
         </div>
       </div>
     </section>

@@ -4,10 +4,8 @@ const NAV_HTML = `
 <nav class="nav" role="navigation" aria-label="主選單">
   <div class="nav__inner">
 
-    <!-- LOGO — 替換成你的圖片: <img class="nav__logo-img" src="images/logo.svg" alt="Ugly Veggie"> -->
     <a href="index.html" class="nav__logo" aria-label="回到首頁">
-      <div class="nav__logo-placeholder" aria-hidden="true">U</div>
-      <span>醜蔬果誌</span>
+     <img class="nav__logo-img" src="assets/logo.svg" alt="Ugly Veggie">
     </a>
 
     <!-- Desktop Links -->
@@ -72,8 +70,7 @@ const FOOTER_HTML = `
 </footer>
 `;
 
-// Inject on DOM ready
-document.addEventListener('DOMContentLoaded', () => {
+function injectSharedComponents() {
   // Nav
   const navTarget = document.getElementById('nav-placeholder');
   if (navTarget) navTarget.outerHTML = NAV_HTML;
@@ -81,4 +78,6 @@ document.addEventListener('DOMContentLoaded', () => {
   // Footer
   const footerTarget = document.getElementById('footer-placeholder');
   if (footerTarget) footerTarget.outerHTML = FOOTER_HTML;
-});
+}
+
+injectSharedComponents();

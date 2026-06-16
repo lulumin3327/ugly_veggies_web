@@ -63,7 +63,7 @@ const FOOTER_HTML = `
       </div>
     </div>
     <div class="footer__bottom">
-      <span>© 2025 醜蔬果誌. All rights reserved.</span>
+      <span>© 2026 醜蔬果誌. All rights reserved.</span>
       <span>Made with ♥ for imperfect vegetables</span>
     </div>
   </div>

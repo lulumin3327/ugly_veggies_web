@@ -28,9 +28,9 @@
 
 :root {
   /* Brand Colors — Placeholder palette */
-  --primary-color: #5B532C;      /* Deep forest green */
+  --primary-color: #63A361;      /* Deep forest green */
   --secondary-color: #FFC50F;    /* Vibrant sunflower yellow */
-  --accent-color: #63A361;       /* Earthy green */
+  --accent-color: #5B532C;       /* Earthy green */
   --accent-light: #FDE7B3;       /* Soft pastel yellow */
   --bg-color: #F7F3EC;           /* Warm off-white (like paper) */
   --bg-section: #EDE8DF;         /* Slightly darker section bg */

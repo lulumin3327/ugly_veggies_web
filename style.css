@@ -490,20 +490,27 @@ h3 { font-size: 1.3rem; }
    Hero
    ============================================= */
 .hero {
-  min-height: calc(90vh - var(--nav-height));
+  min-height: calc(100vh - var(--nav-height));
   display: flex;
   align-items: center;
-  background-color: var(--bg-color);
+  background-image:
+    linear-gradient(90deg, rgba(30, 30, 30, 0.78) 0%, rgba(30, 30, 30, 0.5) 48%, rgba(30, 30, 30, 0.16) 100%),
+    url("assets/hero_img.png");
+  background-position: center;
+  background-size: cover;
+  color: var(--white);
   overflow: hidden;
   position: relative;
 }
 
 .hero__inner {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4rem;
-  align-items: center;
-  padding: var(--gap-xl) 0;
+  display: block;
+  max-width: 680px;
+  padding: clamp(5rem, 10vw, 8rem) 0;
+}
+
+.hero__text {
+  max-width: 680px;
 }
 
 .hero__label {
@@ -511,7 +518,7 @@ h3 { font-size: 1.3rem; }
   font-weight: 600;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: var(--accent-color);
+  color: var(--secondary-color);
   margin-bottom: 1.25rem;
   display: block;
 }
@@ -520,18 +527,18 @@ h3 { font-size: 1.3rem; }
   font-family: var(--font-display);
   font-size: clamp(3rem, 6vw, 5rem);
   line-height: 1.05;
-  color: var(--primary-color);
+  color: var(--white);
   margin-bottom: 1.5rem;
 }
 
 .hero__title em {
   font-style: italic;
-  color: var(--accent-color);
+  color: var(--secondary-color);
 }
 
 .hero__desc {
   font-size: 1.1rem;
-  color: var(--text-mid);
+  color: rgba(255,255,255,0.88);
   max-width: 42ch;
   margin-bottom: 2rem;
   line-height: 1.75;
@@ -543,8 +550,28 @@ h3 { font-size: 1.3rem; }
   flex-wrap: wrap;
 }
 
+.hero .btn--primary {
+  background-color: var(--white);
+  color: var(--primary-color);
+}
+
+.hero .btn--primary:hover {
+  background-color: var(--secondary-color);
+}
+
+.hero .btn--outline {
+  color: var(--white);
+  border-color: rgba(255,255,255,0.82);
+}
+
+.hero .btn--outline:hover {
+  background-color: var(--white);
+  color: var(--primary-color);
+  border-color: var(--white);
+}
+
 .hero__visual {
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   position: relative;
@@ -769,6 +796,13 @@ h3 { font-size: 1.3rem; }
     gap: 2.5rem;
     text-align: center;
     padding: 3rem 0;
+  }
+
+  .hero {
+    min-height: calc(92vh - var(--nav-height));
+    background-image:
+      linear-gradient(180deg, rgba(30, 30, 30, 0.72) 0%, rgba(30, 30, 30, 0.58) 100%),
+      url("assets/hero_img.png");
   }
 
   .hero__desc { margin: 0 auto 2rem; }

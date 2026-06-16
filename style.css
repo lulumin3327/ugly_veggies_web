@@ -28,10 +28,10 @@
 
 :root {
   /* Brand Colors — Placeholder palette */
-  --primary-color: #2D5016;      /* Deep forest green */
-  --secondary-color: #7BAE3E;    /* Leaf green */
-  --accent-color: #E8842A;       /* Earthy orange */
-  --accent-light: #F5C97A;       /* Warm yellow */
+  --primary-color: #5B532C;      /* Deep forest green */
+  --secondary-color: #FFC50F;    /* Vibrant sunflower yellow */
+  --accent-color: #63A361;       /* Earthy green */
+  --accent-light: #FDE7B3;       /* Soft pastel yellow */
   --bg-color: #F7F3EC;           /* Warm off-white (like paper) */
   --bg-section: #EDE8DF;         /* Slightly darker section bg */
   --text-dark: #1E1E1E;
@@ -471,12 +471,6 @@ h3 { font-size: 1.3rem; }
   color: var(--text-muted);
   margin-bottom: 1rem;
   line-height: 1.6;
-}
-
-.card__price {
-  font-weight: 700;
-  color: var(--primary-color);
-  font-size: 1.1rem;
 }
 
 /* =============================================
